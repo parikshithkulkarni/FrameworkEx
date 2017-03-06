@@ -1,0 +1,14 @@
+<suite name="P1 Tests" verbose="1">
+    <test name="P1 Tests">
+        <groups>
+            <run>
+                <include name="P1"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="Tests.HomPageTest" />
+            <class name="Tests.LoginPageTest" />
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="unitTestsDataProvider" verbose="1">
+<parameter name="browser" value="Chrome"></parameter>
+    <test name="dataProviderTests">
+        <classes>
+
+            <class name="Tests.HomPageTest" />
+            <class name="Tests.LoginPageTest" />
+        </classes>
+    </test>
+</suite>

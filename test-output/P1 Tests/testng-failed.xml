@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [P1 Tests]">
+  <test name="P1 Tests(failed)">
+    <groups>
+      <run>
+        <include name="P1"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="Tests.LoginPageTest">
+        <methods>
+          <include name="invalidLoginTest"/>
+        </methods>
+      </class> <!-- Tests.LoginPageTest -->
+    </classes>
+  </test> <!-- P1 Tests(failed) -->
+</suite> <!-- Failed suite [P1 Tests] -->
