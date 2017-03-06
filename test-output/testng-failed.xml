@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [P1 Tests]">
-  <test name="P1 Tests(failed)">
+<suite name="Failed suite [P2 Tests]">
+  <test name="P2 Tests(failed)">
     <groups>
       <run>
-        <include name="P1"/>
+        <include name="P2"/>
       </run>
     </groups>
     <classes>
-      <class name="Tests.LoginPageTest">
+      <class name="Tests.HomPageTest">
         <methods>
-          <include name="invalidLoginTest"/>
+          <include name="verifyLoginNavigation"/>
         </methods>
-      </class> <!-- Tests.LoginPageTest -->
+      </class> <!-- Tests.HomPageTest -->
     </classes>
-  </test> <!-- P1 Tests(failed) -->
-</suite> <!-- Failed suite [P1 Tests] -->
+  </test> <!-- P2 Tests(failed) -->
+</suite> <!-- Failed suite [P2 Tests] -->

@@ -13,20 +13,22 @@ import org.testng.annotations.Test;
  */
 public class HomPageTest {
 
-    @Test(groups = "P1")
-    public void verifyLinkVisible(){
+    @Test//(groups = "P1")
+    @Parameters(value = "browser")
+    public void verifyLinkVisible(String browser){
 
-        WebDriver driver = BrowserFactory.getBrowser();
+        WebDriver driver = BrowserFactory.getBrowser(browser);
         driver.get("http://store.demoqa.com");
         HomePagePOM homePagePOM = PageFactory.initElements(driver,HomePagePOM.class);
         Assert.assertTrue(homePagePOM.isMyAccountLinkClickable()&&homePagePOM.isMyAccountLinkVisible()
                 ,"Link is not visible or clickable");
     }
 
-    @Test(groups = "P2")
-    public void verifyLoginNavigation(){
+    @Test//(groups = "P2")
+    @Parameters(value = "browser")
+    public void verifyLoginNavigation(String browser){
 
-        WebDriver driver = BrowserFactory.getBrowser();
+        WebDriver driver = BrowserFactory.getBrowser(browser);
         driver.get("http://store.demoqa.com");
         HomePagePOM homePagePOM = PageFactory.initElements(driver,HomePagePOM.class);
         homePagePOM.clickMyAccountLink();

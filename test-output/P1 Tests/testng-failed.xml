@@ -8,6 +8,11 @@
       </run>
     </groups>
     <classes>
+      <class name="Tests.HomPageTest">
+        <methods>
+          <include name="verifyLinkVisible"/>
+        </methods>
+      </class> <!-- Tests.HomPageTest -->
       <class name="Tests.LoginPageTest">
         <methods>
           <include name="invalidLoginTest"/>

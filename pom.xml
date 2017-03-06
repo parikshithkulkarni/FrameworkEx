@@ -13,6 +13,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--<BROWSERNAME>${BROWSERNAME} </BROWSERNAME>-->
         <!--<jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <testng.version>6.9.10</testng.version>
@@ -103,6 +104,12 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
+                            <systemProperties>
+                                <systemProperty>
+                                    <name>BrowserName</name>
+                                    <value>$BROWSERNAME</value>
+                                </systemProperty>
+                            </systemProperties>
                             <skip>false</skip>
                             <suiteXmlFiles>
                                 <!-- TestNG suite XML files -->

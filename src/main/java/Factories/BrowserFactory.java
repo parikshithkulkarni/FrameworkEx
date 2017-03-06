@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.io.File;
@@ -21,9 +22,9 @@ public class BrowserFactory {
 
     private static WebDriver driver;
 
-    @Parameters(value = "browser")
+    //@Parameters(value = "browser")
     public static WebDriver getBrowser(String browserName){
-
+        browserName = System.getProperty("BrowserName");
         if(driver == null){
 
             if(browserName.equalsIgnoreCase("IE")){
@@ -45,10 +46,10 @@ public class BrowserFactory {
     }
 
 
-    public static WebDriver getBrowser(){
+    /*public static WebDriver getBrowser(){
         driver = getBrowser("Firefox");
         return driver;
-    }
+    }*/
 
     public static void takeScreenShot(String testcaseName){
         TakesScreenshot screenshot = (TakesScreenshot)driver;

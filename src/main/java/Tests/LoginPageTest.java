@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -22,9 +23,10 @@ public class LoginPageTest {
     String testCaseName = "Test";
 
     @Test(groups = "P1")
-    public void invalidLoginTest(){
+    @Parameters(value = "browser")
+    public void invalidLoginTest(String browser){
         String completeTestcaseName = testCaseName+"001";
-        WebDriver driver = BrowserFactory.getBrowser();
+        WebDriver driver = BrowserFactory.getBrowser(browser);
         driver.get("http://store.demoqa.com");
 
         HomePagePOM homePagePOM = PageFactory.initElements(driver,HomePagePOM.class);

@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="unitTestsDataProvider" verbose="1">
-<parameter name="browser" value="Chrome"></parameter>
-    <test name="dataProviderTests">
-        <classes>
+<suite name="unitTestsDataProvider" verbose="1" thread-count="10" parallel="tests">
+    <tests>
+        <test name="test1">
+            <parameters>
+                <parameter name="browser" value="${BROWSERNAME}" />
+            </parameters>
+            <classes>
+                <class name="Tests.LoginPageTest" />
+                <class name="Tests.HomPageTest" />
+            </classes>
+        </test>
 
-            <class name="Tests.HomPageTest" />
-            <class name="Tests.LoginPageTest" />
-        </classes>
-    </test>
+        <!--<test name="test2">
+            <parameters>
+                <parameter name="browser" value="Firefox" />
+            </parameters>
+            <classes>
+                <class name="Tests.HomPageTest" />
+            </classes>
+        </test>-->
+    </tests>
 </suite>
